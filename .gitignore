@@ -1,0 +1,63 @@
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Environment variables
+.env
+.env.local
+
+# Build outputs
+build/
+cache/
+artifacts/
+typechain-types/
+
+# Powers of Tau file (too large for git)
+ptau/
+
+# Circuit compilation outputs
+circuits/*.r1cs
+circuits/*.wasm
+circuits/*.sym
+circuits/*.ptau
+circuits/*.zkey
+circuits/*.vkey
+circuits/*.sol
+circuits/*.json
+
+# Generated verifier
+contracts/Verifier.sol
+
+# Credentials (sensitive)
+credentials/
+*.credential.json
+
+# Logs
+*.log
+npm-debug.log*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test coverage
+coverage/
+
+# Temporary files
+tmp/
+temp/
+
+# Issuer keys (sensitive)
+.issuer_a_key.json
+.issuer_b_key.json
+
+# Git config (should never be tracked, but just in case)
+.git/config

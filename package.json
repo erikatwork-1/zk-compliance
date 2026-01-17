@@ -1,0 +1,46 @@
+{
+  "name": "zk-age-citizenship-verification",
+  "version": "1.0.0",
+  "description": "Zero-knowledge proof system for privacy-preserving age and citizenship verification",
+  "main": "index.js",
+  "scripts": {
+    "compile": "forge build",
+    "test": "forge test",
+    "test:circuit": "node circuits/test/circuit.test.js",
+    "check:prerequisites": "bash scripts/setup/check_prerequisites.sh",
+    "setup": "node scripts/setup/trusted_setup.js",
+    "setup:demo": "bash scripts/setup/setup_demo.sh",
+    "compile:circuit": "bash scripts/setup/compile_circuit.sh",
+    "download:ptau": "bash scripts/setup/download_ptau.sh",
+    "deploy:local": "bash scripts/deploy/deploy_contracts.sh local",
+    "deploy:ganache": "bash scripts/deploy/deploy_contracts.sh ganache",
+    "deploy:sepolia": "bash scripts/deploy/deploy_contracts.sh sepolia",
+    "issuer:a": "node scripts/issuers/issuer_a_sign.js",
+    "issuer:b": "node scripts/issuers/issuer_b_sign.js",
+    "generate:proof": "node scripts/user/generate_proof.js",
+    "copy:artifacts": "node scripts/setup/copy_artifacts.js",
+    "register:issuers": "node scripts/deploy/register_issuers.js",
+    "example": "node examples/full_flow_example.js",
+    "test:e2e": "node test/e2e/full_flow.test.js"
+  },
+  "keywords": [
+    "zero-knowledge",
+    "zk-snark",
+    "circom",
+    "ethereum",
+    "identity",
+    "verification"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@noble/secp256k1": "^2.0.0",
+    "circomlib": "^2.0.5",
+    "circomlibjs": "^0.1.7",
+    "ethers": "^6.9.0",
+    "snarkjs": "^0.7.6"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.6"
+  }
+}
